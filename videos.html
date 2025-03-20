@@ -1,0 +1,673 @@
+<!doctype html>
+<html dir="rtl" lang="he-IL" class="no-js he ">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+    <!-- Link to Google Fonts Assistant -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" type="text/css" href="build/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="build/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <style>
+    :root {
+        --bs-primary: #FFD530;
+        --bs-primary-rgb:255, 213, 48;
+        --bs-secondary: #6c757d;
+        --bs-secondary-rgb: 108, 117, 125;
+        --bs-success: #198754;
+        --bs-success-rgb: 25, 135, 84;
+        --bs-info: #0dcaf0;
+        --bs-info-rgb: 13, 202, 240;
+        --bs-warning: #ffc107;
+        --bs-warning-rgb: 255, 193, 7;
+        --bs-danger: #dc3545;
+        --bs-danger-rgb: 220, 53, 69;
+        --bs-light: #f8f9fa;
+        --bs-light-rgb: 248, 249, 250;
+        --bs-dark: #212529;
+        --bs-dark-rgb: 33, 37, 41;
+        --bs-font-family: 'Assistant', sans-serif;
+        --font-weight: 400;
+        --font-size: 16px;
+        --line-height: 1;
+        --bs-btn-color: #fff;
+        --bs-btn-bg: #FFD530;
+        --bs-btn-border-color: #FFD530;
+        --bs-btn-hover-color: #fff;
+        --bs-btn-hover-bg: #0b5ed7;
+        --bs-btn-hover-border-color: #0a58ca;
+        --bs-btn-focus-shadow-rgb: 49, 132, 253;
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: #0a58ca;
+        --bs-btn-active-border-color: #0a53be;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #fff;
+        --bs-btn-disabled-bg: #FFD530;
+        --bs-btn-disabled-border-color: #FFD530;
+    }
+    </style>
+
+  </head>
+  <body>
+
+    <header class="bg-primary text-black py-2 d-flex align-items-center top-header">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+            	<div id="top-header-start" class="col-md-4 col-xl-3 text-center text-md-start p-0">
+            	    <ul class="d-flex justify-content-center justify-content-md-start list-unstyled m-0 p-0">
+            	        <li class="ps-5"><a class="text-black text-decoration-none" href="#">אודות</a></li>
+            	        <li class="ps-5"><a class="text-black text-decoration-none" href="#">סניפים</a></li>
+            	        <li class="ps-5"><a class="text-black text-decoration-none" href="#">יצירת קשר</a></li>
+            	    </ul>
+            	</div>
+            	<div class="col-md-4 col-xl-6">
+            	    <div class="swiper PromotionSwiper">
+            	        <div class="swiper-wrapper">
+            	            <div class="swiper-slide text-center">משלוח חינם הבית מעל 150 ₪</div>
+            	            <div class="swiper-slide text-center">משלוח חינם הבית מעל 150 ₪</div>
+            	            <div class="swiper-slide text-center">משלוח חינם הבית מעל 150 ₪</div>
+            	        </div>
+            	        <!-- Add navigation buttons -->
+            	        <div class="bg-primary swiper-button-next">
+            	            <button class="btn btn-link p-0 m-0 bg-transparent" aria-label="Next slide">
+            	                <img src="images/chevron-end.svg" alt="Next slide">
+            	            </button>
+            	        </div>
+            	        <div class="bg-primary swiper-button-prev">
+            	            <button class="btn btn-link p-0 m-0 bg-transparent" aria-label="Previous slide">
+            	                <img src="images/chevron-start.svg" alt="Previous slide">
+            	            </button>
+            	        </div>
+            	    </div>
+            	</div>
+                <div class="col-md-4 col-xl-3 text-center text-md-end p-2">
+                	<ul class="d-flex justify-content-center justify-content-md-end list-unstyled m-0 p-0">
+                		<li class="d-flex align-items-center ps-5">
+                			<a class="text-black text-decoration-none fw-bold" href="tel:08-9247777">08-9247777</a>
+                		</li>
+                		<li class="d-flex align-items-center">
+                		    <a class="btn btn-link p-0 m-0" href="#" role="button" aria-label="Contrast toggle">
+                		        <img src="images/contrast.svg" alt="Contrast icon">
+                		    </a>
+                		</li>
+                	</ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Second Section -->
+    <section class="middle-header">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-2 p-0 text-center text-md-end">
+                    <img src="images/logo.png" alt="Logo" class="img-fluid">
+                </div>
+                <div class="col-12 col-md-4 col-xl-6">
+                    <form class="input-group" action="#" method="GET">
+                        <input type="text" class="form-control" placeholder="חיפוש מוצר / מותג / קטגוריה">
+                        <button type="submit" class="input-group-text">
+                        	<img src="images/Search.svg">
+                        </button>
+                    </form>
+                </div>
+                <div id="middle-header-end" class="col-12 col-md-6 col-xl-4 text-center text-md-start">
+                	<ul class="list-unstyled d-flex justify-content-end">
+                		<li>
+                			<a href="#" class="text-dark text-center d-flex flex-column flex-wrap pe-5 text-decoration-none">
+                				<span class="d-block d-block-img"><img class="img-fluid" src="images/nav/user.svg"></span>
+                				<span>התחברות / הרשמה</span>
+                			</a>
+                		</li>
+                		<li>
+                			<a href="#" class="text-dark text-center d-flex flex-column flex-wrap pe-5 text-decoration-none">
+                				<span class="d-block d-block-img position-relative">
+                                    <span class="badge bg-primary text-dark position-absolute top-0 end-0 rounded-circle">0</span>
+                                    <img class="img-fluid" src="images/nav/cart.svg">
+                                </span>
+                				<span>העגלה שלי</span>
+                			</a>
+                		</li>
+                		<li>
+                			<a href="#" class="text-dark text-center d-flex flex-column flex-wrap pe-5 text-decoration-none">
+                				<span class="d-block d-block-img"><img class="img-fluid" src="images/nav/heart.svg"></span>
+                				<span>המועדפים שלי</span>
+                			</a>
+                		</li>
+                	</ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Third Section - Full Width Menu -->
+    <nav class="py-2">
+        <div class="container px-0 py-2 position-relative">
+            <ul class="nav justify-content-between p-0">
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">כלי עבודה</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">רכב ומוסכים</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">עולם הריתוך והמסגרות</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">הרמה קשירה וגרירה</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">שינוע לציוד כבד</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">ריהוט תעשייתי</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">בטיחות ומיגון</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">ציוד הידראולי</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">כלי גינון</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">כלי אוויר</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">מדחסים</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">גינון מקצועיים</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">רכבי שטח</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section class="container-fluid section-top-page">
+    	<div class="container pt-2 mt-5">
+    	    <!-- Title -->
+    	    <h1 class="h1 text-center">סרטונים מקצועיים</h1>
+    	    
+    	    <!-- Breadcrumbs -->
+    	    <nav aria-label="breadcrumb" class="d-flex mt-3 justify-content-center">
+    	        <ol class="breadcrumb">
+    	            <li class="breadcrumb-item"><a href="#">דף הבית</a></li>
+    	            <li class="breadcrumb-item active" aria-current="page">סרטונים מקצועיים</li>
+    	        </ol>
+    	    </nav>
+    	</div>
+    </section>
+
+    <!-- Tabs -->
+    <section class="my-2 section-videos">
+
+        <div class="container-fluid videos-top-list">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <!-- First Column with Buttons -->
+                    <div class="col-12 col-xl-4">
+                        <div class="d-flex justify-content-start mt-4">
+                            <button class="btn btn-category btn-outline-dark rounded-5 ms-4">מאמרים מקצועיים</button>
+                            <button class="btn btn-category btn-dark rounded-5">סרטונים מקצועיים</button>
+                        </div>
+                    </div>
+
+                    <!-- Second Column with Select and Button -->
+                    <div class="col-12 col-xl-4">
+                        <div class="d-flex justify-content-start mt-3">
+                            <select class="form-select border-end-0 border-start-0 border-top-0 rounded-0 ms-5" aria-label="קטגוריה">
+                                <option selected>קטגוריה</option>
+                                <!-- Add options here -->
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <button class="btn btn-primary btn-submit fw-bold rounded-2 min-200">חיפוש</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    	<div class="container-fluid">
+
+    		<div class="container py-4 my-4">
+
+    			<div class="row">
+
+    			    <!-- Second Banner -->
+    			    <div data-aos="fade-up" class="col-6 col-md-4 col-xl-3 mb-4">
+    			        <a href="#" class="banner-card position-relative overflow-hidden rounded-2">
+
+                            <div class="position-absolute z-1 top-0 start-0 py-3 px-2 mx-2">
+                                <span class="banner-badge badge text-dark">גינון</span>
+                            </div>
+
+                            <div class="position-absolute z-1 top-0 start-0 end-0 bottom-0 start-0 d-flex align-items-center justify-content-center">
+                                <span class="banner-play"><img class="img-fluid" src="images/play.svg"></span>
+                            </div>
+                            
+    			            <img src="images/videos/video1.jpg" class="img-fluid w-100 h-100 position-absolute top-0 start-0 object-fit-cover" alt="Banner 2">
+
+    			        </a>
+    			    </div>
+
+                    <!-- Second Banner -->
+                    <div data-aos="fade-up" class="col-6 col-md-4 col-xl-3 mb-4">
+                        <a href="#" class="banner-card position-relative overflow-hidden rounded-2">
+
+                            <div class="position-absolute z-1 top-0 start-0 py-3 px-2 mx-2">
+                                <span class="banner-badge badge text-dark">גינון</span>
+                            </div>
+
+                            <div class="position-absolute z-1 top-0 start-0 end-0 bottom-0 start-0 d-flex align-items-center justify-content-center">
+                                <span class="banner-play"><img class="img-fluid" src="images/play.svg"></span>
+                            </div>
+                            
+                            <img src="images/videos/video2.jpg" class="img-fluid w-100 h-100 position-absolute top-0 start-0 object-fit-cover" alt="Banner 2">
+
+                        </a>
+                    </div>
+
+                    <!-- Second Banner -->
+                    <div data-aos="fade-up" class="col-6 col-md-4 col-xl-3 mb-4">
+                        <a href="#" class="banner-card position-relative overflow-hidden rounded-2">
+
+                            <div class="position-absolute z-1 top-0 start-0 py-3 px-2 mx-2">
+                                <span class="banner-badge badge text-dark">גינון</span>
+                            </div>
+
+                            <div class="position-absolute z-1 top-0 start-0 end-0 bottom-0 start-0 d-flex align-items-center justify-content-center">
+                                <span class="banner-play"><img class="img-fluid" src="images/play.svg"></span>
+                            </div>
+                            
+                            <img src="images/videos/video3.jpg" class="img-fluid w-100 h-100 position-absolute top-0 start-0 object-fit-cover" alt="Banner 2">
+
+                        </a>
+                    </div>
+
+                    <!-- Second Banner -->
+                    <div data-aos="fade-up" class="col-6 col-md-4 col-xl-3 mb-4">
+                        <a href="#" class="banner-card position-relative overflow-hidden rounded-2">
+
+                            <div class="position-absolute z-1 top-0 start-0 py-3 px-2 mx-2">
+                                <span class="banner-badge badge text-dark">גינון</span>
+                            </div>
+
+                            <div class="position-absolute z-1 top-0 start-0 end-0 bottom-0 start-0 d-flex align-items-center justify-content-center">
+                                <span class="banner-play"><img class="img-fluid" src="images/play.svg"></span>
+                            </div>
+                            
+                            <img src="images/videos/video4.jpg" class="img-fluid w-100 h-100 position-absolute top-0 start-0 object-fit-cover" alt="Banner 2">
+
+                        </a>
+                    </div>
+
+                    <!-- Second Banner -->
+                    <div data-aos="fade-up" class="col-6 col-md-4 col-xl-3 mb-4">
+                        <a href="#" class="banner-card position-relative overflow-hidden rounded-2">
+
+                            <div class="position-absolute z-1 top-0 start-0 py-3 px-2 mx-2">
+                                <span class="banner-badge badge text-dark">גינון</span>
+                            </div>
+
+                            <div class="position-absolute z-1 top-0 start-0 end-0 bottom-0 start-0 d-flex align-items-center justify-content-center">
+                                <span class="banner-play"><img class="img-fluid" src="images/play.svg"></span>
+                            </div>
+                            
+                            <img src="images/videos/video1.jpg" class="img-fluid w-100 h-100 position-absolute top-0 start-0 object-fit-cover" alt="Banner 2">
+
+                        </a>
+                    </div>
+
+                    <!-- Second Banner -->
+                    <div data-aos="fade-up" class="col-6 col-md-4 col-xl-3 mb-4">
+                        <a href="#" class="banner-card position-relative overflow-hidden rounded-2">
+
+                            <div class="position-absolute z-1 top-0 start-0 py-3 px-2 mx-2">
+                                <span class="banner-badge badge text-dark">גינון</span>
+                            </div>
+
+                            <div class="position-absolute z-1 top-0 start-0 end-0 bottom-0 start-0 d-flex align-items-center justify-content-center">
+                                <span class="banner-play"><img class="img-fluid" src="images/play.svg"></span>
+                            </div>
+                            
+                            <img src="images/videos/video2.jpg" class="img-fluid w-100 h-100 position-absolute top-0 start-0 object-fit-cover" alt="Banner 2">
+
+                        </a>
+                    </div>
+
+                    <!-- Second Banner -->
+                    <div data-aos="fade-up" class="col-6 col-md-4 col-xl-3 mb-4">
+                        <a href="#" class="banner-card position-relative overflow-hidden rounded-2">
+
+                            <div class="position-absolute z-1 top-0 start-0 py-3 px-2 mx-2">
+                                <span class="banner-badge badge text-dark">גינון</span>
+                            </div>
+
+                            <div class="position-absolute z-1 top-0 start-0 end-0 bottom-0 start-0 d-flex align-items-center justify-content-center">
+                                <span class="banner-play"><img class="img-fluid" src="images/play.svg"></span>
+                            </div>
+                            
+                            <img src="images/videos/video3.jpg" class="img-fluid w-100 h-100 position-absolute top-0 start-0 object-fit-cover" alt="Banner 2">
+
+                        </a>
+                    </div>
+
+                    <!-- Second Banner -->
+                    <div data-aos="fade-up" class="col-6 col-md-4 col-xl-3 mb-4">
+                        <a href="#" class="banner-card position-relative overflow-hidden rounded-2">
+
+                            <div class="position-absolute z-1 top-0 start-0 py-3 px-2 mx-2">
+                                <span class="banner-badge badge text-dark">גינון</span>
+                            </div>
+
+                            <div class="position-absolute z-1 top-0 start-0 end-0 bottom-0 start-0 d-flex align-items-center justify-content-center">
+                                <span class="banner-play"><img class="img-fluid" src="images/play.svg"></span>
+                            </div>
+                            
+                            <img src="images/videos/video4.jpg" class="img-fluid w-100 h-100 position-absolute top-0 start-0 object-fit-cover" alt="Banner 2">
+
+                        </a>
+                    </div>
+
+                    <!-- Second Banner -->
+                    <div data-aos="fade-up" class="col-6 col-md-4 col-xl-3 mb-4">
+                        <a href="#" class="banner-card position-relative overflow-hidden rounded-2">
+
+                              <div class="position-absolute z-1 top-0 start-0 py-3 px-2 mx-2">
+                                  <span class="banner-badge badge text-dark">גינון</span>
+                              </div>
+
+                              <div class="position-absolute z-1 top-0 start-0 end-0 bottom-0 start-0 d-flex align-items-center justify-content-center">
+                                  <span class="banner-play"><img class="img-fluid" src="images/play.svg"></span>
+                              </div>
+                              
+                            <img src="images/videos/video1.jpg" class="img-fluid w-100 h-100 position-absolute top-0 start-0 object-fit-cover" alt="Banner 2">
+
+                        </a>
+                    </div>
+
+                      <!-- Second Banner -->
+                      <div data-aos="fade-up" class="col-6 col-md-4 col-xl-3 mb-4">
+                          <a href="#" class="banner-card position-relative overflow-hidden rounded-2">
+
+                              <div class="position-absolute z-1 top-0 start-0 py-3 px-2 mx-2">
+                                  <span class="banner-badge badge text-dark">גינון</span>
+                              </div>
+
+                              <div class="position-absolute z-1 top-0 start-0 end-0 bottom-0 start-0 d-flex align-items-center justify-content-center">
+                                  <span class="banner-play"><img class="img-fluid" src="images/play.svg"></span>
+                              </div>
+                              
+                              <img src="images/videos/video2.jpg" class="img-fluid w-100 h-100 position-absolute top-0 start-0 object-fit-cover" alt="Banner 2">
+
+                          </a>
+                      </div>
+
+                      <!-- Second Banner -->
+                      <div data-aos="fade-up" class="col-6 col-md-4 col-xl-3 mb-4">
+                          <a href="#" class="banner-card position-relative overflow-hidden rounded-2">
+
+                              <div class="position-absolute z-1 top-0 start-0 py-3 px-2 mx-2">
+                                  <span class="banner-badge badge text-dark">גינון</span>
+                              </div>
+
+                              <div class="position-absolute z-1 top-0 start-0 end-0 bottom-0 start-0 d-flex align-items-center justify-content-center">
+                                  <span class="banner-play"><img class="img-fluid" src="images/play.svg"></span>
+                              </div>
+                              
+                              <img src="images/videos/video3.jpg" class="img-fluid w-100 h-100 position-absolute top-0 start-0 object-fit-cover" alt="Banner 2">
+
+                          </a>
+                      </div>
+
+                      <!-- Second Banner -->
+                      <div data-aos="fade-up" class="col-6 col-md-4 col-xl-3 mb-4">
+                          <a href="#" class="banner-card position-relative overflow-hidden rounded-2">
+
+                              <div class="position-absolute z-1 top-0 start-0 py-3 px-2 mx-2">
+                                  <span class="banner-badge badge text-dark">גינון</span>
+                              </div>
+
+                              <div class="position-absolute z-1 top-0 start-0 end-0 bottom-0 start-0 d-flex align-items-center justify-content-center">
+                                  <span class="banner-play"><img class="img-fluid" src="images/play.svg"></span>
+                              </div>
+                              
+                              <img src="images/videos/video4.jpg" class="img-fluid w-100 h-100 position-absolute top-0 start-0 object-fit-cover" alt="Banner 2">
+
+                          </a>
+                      </div>  
+
+
+
+                        <!-- Second Banner -->
+                        <div data-aos="fade-up" class="col-6 col-md-4 col-xl-3 mb-4">
+                            <a href="#" class="banner-card position-relative overflow-hidden rounded-2">
+
+                                  <div class="position-absolute z-1 top-0 start-0 py-3 px-2 mx-2">
+                                      <span class="banner-badge badge text-dark">גינון</span>
+                                  </div>
+
+                                  <div class="position-absolute z-1 top-0 start-0 end-0 bottom-0 start-0 d-flex align-items-center justify-content-center">
+                                      <span class="banner-play"><img class="img-fluid" src="images/play.svg"></span>
+                                  </div>
+                                  
+                                <img src="images/videos/video1.jpg" class="img-fluid w-100 h-100 position-absolute top-0 start-0 object-fit-cover" alt="Banner 2">
+
+                            </a>
+                        </div>
+
+                          <!-- Second Banner -->
+                          <div data-aos="fade-up" class="col-6 col-md-4 col-xl-3 mb-4">
+                              <a href="#" class="banner-card position-relative overflow-hidden rounded-2">
+
+                                  <div class="position-absolute z-1 top-0 start-0 py-3 px-2 mx-2">
+                                      <span class="banner-badge badge text-dark">גינון</span>
+                                  </div>
+
+                                  <div class="position-absolute z-1 top-0 start-0 end-0 bottom-0 start-0 d-flex align-items-center justify-content-center">
+                                      <span class="banner-play"><img class="img-fluid" src="images/play.svg"></span>
+                                  </div>
+                                  
+                                  <img src="images/videos/video2.jpg" class="img-fluid w-100 h-100 position-absolute top-0 start-0 object-fit-cover" alt="Banner 2">
+
+                              </a>
+                          </div>
+
+                          <!-- Second Banner -->
+                          <div data-aos="fade-up" class="col-6 col-md-4 col-xl-3 mb-4">
+                              <a href="#" class="banner-card position-relative overflow-hidden rounded-2">
+
+                                  <div class="position-absolute z-1 top-0 start-0 py-3 px-2 mx-2">
+                                      <span class="banner-badge badge text-dark">גינון</span>
+                                  </div>
+
+                                  <div class="position-absolute z-1 top-0 start-0 end-0 bottom-0 start-0 d-flex align-items-center justify-content-center">
+                                      <span class="banner-play"><img class="img-fluid" src="images/play.svg"></span>
+                                  </div>
+                                  
+                                  <img src="images/videos/video3.jpg" class="img-fluid w-100 h-100 position-absolute top-0 start-0 object-fit-cover" alt="Banner 2">
+
+                              </a>
+                          </div>
+
+                          <!-- Second Banner -->
+                          <div data-aos="fade-up" class="col-6 col-md-4 col-xl-3 mb-4">
+                              <a href="#" class="banner-card position-relative overflow-hidden rounded-2">
+
+                                  <div class="position-absolute z-1 top-0 start-0 py-3 px-2 mx-2">
+                                      <span class="banner-badge badge text-dark">גינון</span>
+                                  </div>
+
+                                  <div class="position-absolute z-1 top-0 start-0 end-0 bottom-0 start-0 d-flex align-items-center justify-content-center">
+                                      <span class="banner-play"><img class="img-fluid" src="images/play.svg"></span>
+                                  </div>
+                                  
+                                  <img src="images/videos/video4.jpg" class="img-fluid w-100 h-100 position-absolute top-0 start-0 object-fit-cover" alt="Banner 2">
+
+                              </a>
+                          </div>
+
+
+    			</div>
+    		</div>
+
+    	</div>
+
+    </section>
+
+
+
+
+
+    <!-- Footer Section -->
+    <footer id="footer-site" class="pt-5 bg-dark text-white">
+        <div class="container pt-4 position-relative">
+            <div class="row m-0">
+
+                <!-- Right Side: Logo and Social Media Icons -->
+                <div class="col-12 col-md-2 col-xl-2 text-center text-lg-start mb-4 mb-lg-0">
+                    <!-- Logo -->
+                    <div class="footer-logo mb-3 text-end">
+                        <img src="images/logo-footer.png" alt="Logo" class="img-fluid">
+                    </div>
+                    
+                    <!-- Social Media Icons -->
+                    <div class="footer-social-icons">
+                        <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Left Side: Footer Menus -->
+                <div class="col-12 col-md-10 col-xl-10">
+                    <div class="row">
+                        <!-- Footer Menu 1 -->
+                        <div class="col-12 col-md-4 col-xl-2 mb-4 mb-md-0">
+                            <div class="row">
+                                <div class="footer-title px-0">ל.כי</div>
+                            </div>
+                            <div class="row d-flex">
+                                <ul class="col-auto list-unstyled footer-list p-0">
+                                    <li><a href="#">אודות</a></li>
+                                    <li><a href="#">סניפים</a></li>
+                                    <li><a href="#">דרושים</a></li>
+                                    <li><a href="#">תקנון אתר</a></li>
+                                    <li><a href="#">הצהרת נגישות</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <!-- Footer Menu 3 (Categories) -->
+                        <div class="col-12 col-md-6 mb-4 mb-md-0">
+                            <div class="row">
+                                <div class="footer-title px-0">קטגוריות מוצרים</div>
+                            </div>
+                            <div class="row d-flex">
+                                <ul class="col-12 col-md-4 col-xl-4 list-unstyled footer-list p-0">
+                                    <li><a href="#">כלי עבודה </a></li>
+                                    <li><a href="#">ציוד טכני</a></li>
+                                    <li><a href="#">כלי גינון</a></li>
+                                    <li><a href="#">רכב ומוסכים</a></li>
+                                    <li><a href="#">עולם הריתוך</a></li>
+                                    <li><a href="#">הרמה קשירה וגרירה</a></li>
+                                </ul>
+                                <ul class="col-12 col-md-4 col-xl-4 list-unstyled footer-list p-0">
+                                    <li><a href="#">שינוע לציוד כבד</a></li>
+                                    <li><a href="#">אחסון ושינוע כלים</a></li>
+                                    <li><a href="#">ריהוט תעשייתי</a></li>
+                                    <li><a href="#">ציוד בטיחות ומיגון</a></li>
+                                    <li><a href="#">ציוד הידראולי</a></li>
+                                    <li><a href="#">מסורים וכלי נגרות</a></li>
+                                </ul>
+                                <ul class="col-12 col-md-4 col-xl-4 list-unstyled footer-list p-0">
+                                    <li><a href="#">כלי אוויר וציוד פנאומטי</a></li>
+                                    <li><a href="#">גינון מקצועיים</a></li>
+                                    <li><a href="#">קטגוריה</a></li>
+                                    <li><a href="#">ציוד לרכבי שטח</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <!-- Footer Menu 2 -->
+                        <div class="col-12 col-md-4 col-xl-2 mb-4 mb-md-0">
+                            <div class="row">
+                                <div class="footer-title px-0">צריכים עזרה</div>
+                            </div>
+                            <div class="row d-flex">
+                                <ul class="col-auto  list-unstyled footer-list p-0">
+                                    <li><a href="#">צור קשר</a></li>
+                                    <li><a href="#">החזרות</a></li>
+                                    <li><a href="#">ביטול עסקה</a></li>
+                                    <li><a href="#">משלוחים</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Footer Menu 4 (Opening Hours) -->
+                        <div class="col-12 col-md-4 col-xl-2">
+                            <div class="footer-title px-0">שעות פעילות הסניפים</div>
+
+                            <ul class="list-unstyled footer-list p-0">
+                                <li>
+                                    <div>
+                                        <p><strong>סניף ראשי-רמלה</strong></p>
+                                        <p>ימים א'-ה' 7:30-17:30</p>
+                                        <p>יום ו' 7:30-13:00</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <p><strong>סניף צפון-קדמת גליל</strong></p>
+                                        <p>ימים א'-ה' 7:30-16:30</p>
+                                        <p>ום ו' 8:00-13:00</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <p><strong>סניף מרכז הריתוך</strong></p>
+                                        <p>ימים א'-ה' 8:00-17:00</p>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom Footer Section -->
+    <footer class="py-3 bg-dark text-white">
+        <div class="container position-relative">
+
+        	<!-- Horizontal Line for Separation -->
+        	<hr class="my-4 border-light">
+
+            <div class="row">
+
+                <!-- Right Side: Terms Menu -->
+                <div class="col-12 col-md-6 text-center text-md-start">
+                    <ul class="d-flex justify-content-center justify-content-md-start list-unstyled mb-0 p-0">
+                        <li><a href="#" class="text-white text-decoration-none">תקנון ותנאי שימוש</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">מדיניות פרטיות</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">מפת אתר</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">הצהרת נגישות</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Left Side: Credit -->
+                <div class="col-12 col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p>Created by Dooble</p>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script src="build/js/master.js"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,1893 @@
+<!doctype html>
+<html dir="rtl" lang="he-IL" class="no-js he ">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+    <!-- Link to Google Fonts Assistant -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" type="text/css" href="build/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="build/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <style>
+    :root {
+        --bs-primary: #FFD530;
+        --bs-primary-rgb:255, 213, 48;
+        --bs-secondary: #6c757d;
+        --bs-secondary-rgb: 108, 117, 125;
+        --bs-success: #198754;
+        --bs-success-rgb: 25, 135, 84;
+        --bs-info: #0dcaf0;
+        --bs-info-rgb: 13, 202, 240;
+        --bs-warning: #ffc107;
+        --bs-warning-rgb: 255, 193, 7;
+        --bs-danger: #dc3545;
+        --bs-danger-rgb: 220, 53, 69;
+        --bs-light: #f8f9fa;
+        --bs-light-rgb: 248, 249, 250;
+        --bs-dark: #212529;
+        --bs-dark-rgb: 33, 37, 41;
+        --bs-font-family: 'Assistant', sans-serif;
+        --font-weight: 400;
+        --font-size: 16px;
+        --line-height: 1;
+        --bs-btn-color: #fff;
+        --bs-btn-bg: #FFD530;
+        --bs-btn-border-color: #FFD530;
+        --bs-btn-hover-color: #fff;
+        --bs-btn-hover-bg: #0b5ed7;
+        --bs-btn-hover-border-color: #0a58ca;
+        --bs-btn-focus-shadow-rgb: 49, 132, 253;
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: #0a58ca;
+        --bs-btn-active-border-color: #0a53be;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #fff;
+        --bs-btn-disabled-bg: #FFD530;
+        --bs-btn-disabled-border-color: #FFD530;
+    }
+    </style>
+
+  </head>
+  <body>
+
+    <header class="bg-primary text-black py-2 d-flex align-items-center top-header">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+            	<div id="top-header-start" class="col-md-4 col-xl-3 text-center text-md-start p-0">
+            	    <ul class="d-flex justify-content-center justify-content-md-start list-unstyled m-0 p-0">
+            	        <li class="ps-5"><a class="text-black text-decoration-none" href="#">אודות</a></li>
+            	        <li class="ps-5"><a class="text-black text-decoration-none" href="#">סניפים</a></li>
+            	        <li class="ps-5"><a class="text-black text-decoration-none" href="#">יצירת קשר</a></li>
+            	    </ul>
+            	</div>
+            	<div class="col-md-4 col-xl-6">
+            	    <div class="swiper PromotionSwiper">
+            	        <div class="swiper-wrapper">
+            	            <div class="swiper-slide text-center">משלוח חינם הבית מעל 150 ₪</div>
+            	            <div class="swiper-slide text-center">משלוח חינם הבית מעל 150 ₪</div>
+            	            <div class="swiper-slide text-center">משלוח חינם הבית מעל 150 ₪</div>
+            	        </div>
+            	        <!-- Add navigation buttons -->
+            	        <div class="bg-primary swiper-button-next">
+            	            <button class="btn btn-link p-0 m-0 bg-transparent" aria-label="Next slide">
+            	                <img src="images/chevron-end.svg" alt="Next slide">
+            	            </button>
+            	        </div>
+            	        <div class="bg-primary swiper-button-prev">
+            	            <button class="btn btn-link p-0 m-0 bg-transparent" aria-label="Previous slide">
+            	                <img src="images/chevron-start.svg" alt="Previous slide">
+            	            </button>
+            	        </div>
+            	    </div>
+            	</div>
+                <div class="col-md-4 col-xl-3 text-center text-md-end p-2">
+                	<ul class="d-flex justify-content-center justify-content-md-end list-unstyled m-0 p-0">
+                		<li class="d-flex align-items-center ps-5">
+                			<a class="text-black text-decoration-none fw-bold" href="tel:08-9247777">08-9247777</a>
+                		</li>
+                		<li class="d-flex align-items-center">
+                		    <a class="btn btn-link p-0 m-0" href="#" role="button" aria-label="Contrast toggle">
+                		        <img src="images/contrast.svg" alt="Contrast icon">
+                		    </a>
+                		</li>
+                	</ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Second Section -->
+    <section class="middle-header">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-2 p-0 text-center text-md-end">
+                    <img src="images/logo.png" alt="Logo" class="img-fluid">
+                </div>
+                <div class="col-12 col-md-4 col-xl-6">
+                    <form class="input-group" action="#" method="GET">
+                        <input type="text" class="form-control" placeholder="חיפוש מוצר / מותג / קטגוריה">
+                        <button type="submit" class="input-group-text">
+                        	<img src="images/Search.svg">
+                        </button>
+                    </form>
+                </div>
+                <div id="middle-header-end" class="col-12 col-md-6 col-xl-4 text-center text-md-start">
+                	<ul class="list-unstyled d-flex justify-content-end">
+                		<li>
+                			<a href="#" class="text-dark text-center d-flex flex-column flex-wrap pe-5 text-decoration-none">
+                				<span class="d-block d-block-img"><img class="img-fluid" src="images/nav/user.svg"></span>
+                				<span>התחברות / הרשמה</span>
+                			</a>
+                		</li>
+                		<li>
+                			<a href="#" class="text-dark text-center d-flex flex-column flex-wrap pe-5 text-decoration-none">
+                				<span class="d-block d-block-img position-relative">
+                                    <span class="badge bg-primary text-dark position-absolute top-0 end-0 rounded-circle">0</span>
+                                    <img class="img-fluid" src="images/nav/cart.svg">
+                                </span>
+                				<span>העגלה שלי</span>
+                			</a>
+                		</li>
+                		<li>
+                			<a href="#" class="text-dark text-center d-flex flex-column flex-wrap pe-5 text-decoration-none">
+                				<span class="d-block d-block-img"><img class="img-fluid" src="images/nav/heart.svg"></span>
+                				<span>המועדפים שלי</span>
+                			</a>
+                		</li>
+                	</ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Third Section - Full Width Menu -->
+    <nav class="py-2">
+        <div class="container px-0 py-2 position-relative">
+            <ul class="nav justify-content-between p-0">
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">כלי עבודה</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">רכב ומוסכים</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">עולם הריתוך והמסגרות</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">הרמה קשירה וגרירה</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">שינוע לציוד כבד</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">ריהוט תעשייתי</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">בטיחות ומיגון</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">ציוד הידראולי</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">כלי גינון</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">כלי אוויר</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">מדחסים</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">פנסים מקצועיים</a></li>
+                <li class="nav-item"><a class="nav-link text-dark px-0 text-dark" href="#">רכבי שטח</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="py-3">
+        <div class="container-fluid p-0">
+            <div class="swiper swiper-hero">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide text-center">
+                        <div class="card border-0 mt-1">
+                            <img src="images/hero/hero1.jpg" class="img-fluid w-100 card-img rounded-0" alt="Item 1">
+                            <div class="card-img-overlay d-flex justify-content-start pe-5 ps-5 align-items-center text-white">
+                                <div class="text-end">
+                                    <h2 class="card-title">מבצעי בלאק נובמבר <br> על מאות מוצרים מקצועיים</h2>
+                                    <div class="card-text">
+                                        <p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית גולר מונפרר סוברט לורם שבצק יהול, לכנוץ בעריר גק ליץ.</p>
+                                    </div>
+                                    <a href="#" class="btn btn-primary card-link">לפרטים</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide text-center">
+                        <div class="card border-0 mt-1">
+                            <img src="images/hero/hero2.jpg" class="img-fluid w-100 card-img rounded-0" alt="Item 2">
+                            <div class="card-img-overlay d-flex justify-content-start pe-5 ps-5 align-items-center text-white">
+                                <div class="text-end">
+                                    <h2 class="card-title">מבצעי בלאק נובמבר <br> על מאות מוצרים מקצועיים</h2>
+                                    <div class="card-text">
+                                        <p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית גולר מונפרר סוברט לורם שבצק יהול, לכנוץ בעריר גק ליץ.</p>
+                                    </div>
+                                    <a href="#" class="btn btn-primary card-link">לפרטים</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide text-center">
+                        <div class="card border-0 mt-1">
+                            <img src="images/hero/hero3.jpg" class="img-fluid w-100 card-img rounded-0" alt="Item 3">
+                            <div class="card-img-overlay d-flex justify-content-start pe-5 ps-5 align-items-center text-white">
+                                <div class="text-end">
+                                    <h2 class="card-title">מבצעי בלאק נובמבר <br> על מאות מוצרים מקצועיים</h2>
+                                    <div class="card-text">
+                                        <p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית גולר מונפרר סוברט לורם שבצק יהול, לכנוץ בעריר גק ליץ.</p>
+                                    </div>
+                                    <a href="#" class="btn btn-primary card-link">לפרטים</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide text-center">
+                        <div class="card border-0 mt-1">
+                            <img src="images/hero/hero1.jpg" class="img-fluid w-100 card-img rounded-0" alt="Item 1">
+                            <div class="card-img-overlay d-flex justify-content-start pe-5 ps-5 align-items-center text-white">
+                                <div class="text-end">
+                                    <h2 class="card-title">מבצעי בלאק נובמבר <br> על מאות מוצרים מקצועיים</h2>
+                                    <div class="card-text">
+                                        <p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית גולר מונפרר סוברט לורם שבצק יהול, לכנוץ בעריר גק ליץ.</p>
+                                    </div>
+                                    <a href="#" class="btn btn-primary card-link">לפרטים</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide text-center">
+                        <div class="card border-0 mt-1">
+                            <img src="images/hero/hero2.jpg" class="img-fluid w-100 card-img rounded-0" alt="Item 2">
+                            <div class="card-img-overlay d-flex justify-content-start pe-5 ps-5 align-items-center text-white">
+                                <div class="text-end">
+                                    <h2 class="card-title">מבצעי בלאק נובמבר <br> על מאות מוצרים מקצועיים</h2>
+                                    <div class="card-text">
+                                        <p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית גולר מונפרר סוברט לורם שבצק יהול, לכנוץ בעריר גק ליץ.</p>
+                                    </div>
+                                    <a href="#" class="btn btn-primary card-link">לפרטים</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide text-center">
+                        <div class="card border-0 mt-1">
+                            <img src="images/hero/hero3.jpg" class="img-fluid w-100 card-img rounded-0" alt="Item 3">
+                            <div class="card-img-overlay d-flex justify-content-start pe-5 ps-5 align-items-center text-white">
+                                <div class="text-end">
+                                    <h2 class="card-title">מבצעי בלאק נובמבר <br> על מאות מוצרים מקצועיים</h2>
+                                    <div class="card-text">
+                                        <p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית גולר מונפרר סוברט לורם שבצק יהול, לכנוץ בעריר גק ליץ.</p>
+                                    </div>
+                                    <a href="#" class="btn btn-primary card-link">לפרטים</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section data-aos="fade-up" class="py-4 section-categories">
+        <div class="container position-relative py-2">
+            <h3 class="text-center mb-3 h3">קטגוריות מובילות</h3>
+
+            <div class="position-relative">
+                <!-- Add navigation buttons -->
+                <div class="swiper-button-next">
+                    <button class="btn btn-link p-0 m-0 bg-transparent" aria-label="Next slide">
+                        <img src="images/arrow-black-start.svg" alt="Previous slide">
+                    </button>
+                </div>
+                <div class="swiper-button-prev">
+                    <button class="btn btn-link p-0 m-0 bg-transparent" aria-label="Previous slide">
+                        <img src="images/arrow-black-end.svg" alt="Next slide">
+                    </button>
+                </div>
+
+                <div class="swiper categories-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- שורה 1 -->
+                        <div class="swiper-slide">
+                            <div class="row">
+                                <div class="col-12 category-item">
+                                    <a href="#" class="d-flex flex-wrap flex-column text-center justify-content-center text-black text-decoration-none mb-2">
+                                        <div class="category-circle">
+                                            <img src="images/categories/image 33.png" class="img-fluid" alt="">
+                                        </div>
+                                        <span class="d-block">משחזות</span>
+                                    </a>
+                                </div>
+                                <div class="col-12 category-item">
+                                    <a href="#" class="d-flex flex-wrap flex-column text-center justify-content-center text-black text-decoration-none mb-2">
+                                        <div class="category-circle">
+                                            <img src="images/categories/image 33.png" class="img-fluid" alt="">
+                                        </div>
+                                        <span class="d-block">משחזות</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- שורה 1 -->
+                        <div class="swiper-slide">
+                            <div class="row">
+                                <div class="col-12 category-item">
+                                    <a href="#" class="d-flex flex-wrap flex-column text-center justify-content-center text-black text-decoration-none mb-2">
+                                        <div class="category-circle">
+                                            <img src="images/categories/image 33.png" class="img-fluid" alt="">
+                                        </div>
+                                        <span class="d-block">משחזות</span>
+                                    </a>
+                                </div>
+                                <div class="col-12 category-item">
+                                    <a href="#" class="d-flex flex-wrap flex-column text-center justify-content-center text-black text-decoration-none mb-2">
+                                        <div class="category-circle">
+                                            <img src="images/categories/image 33.png" class="img-fluid" alt="">
+                                        </div>
+                                        <span class="d-block">משחזות</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="row">
+                                <div class="col-12 category-item">
+                                    <a href="#" class="d-flex flex-wrap flex-column text-center justify-content-center text-black text-decoration-none mb-2">
+                                        <div class="category-circle">
+                                            <img src="images/categories/image 33.png" class="img-fluid" alt="">
+                                        </div>
+                                        <span class="d-block">משחזות</span>
+                                    </a>
+                                </div>
+                                <div class="col-12 category-item">
+                                    <a href="#" class="d-flex flex-wrap flex-column text-center justify-content-center text-black text-decoration-none mb-2">
+                                        <div class="category-circle">
+                                            <img src="images/categories/image 33.png" class="img-fluid" alt="">
+                                        </div>
+                                        <span class="d-block">משחזות</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- שורה 2 -->
+                        <div class="swiper-slide">
+                            <div class="row">
+                                <div class="col-12 category-item">
+                                    <a href="#" class="d-flex flex-wrap flex-column text-center justify-content-center text-black text-decoration-none mb-2">
+                                        <div class="category-circle">
+                                            <img src="images/categories/image 33.png" class="img-fluid" alt="">
+                                        </div>
+                                        <span class="d-block">משחזות</span>
+                                    </a>
+                                </div>
+                                <div class="col-12 category-item">
+                                    <a href="#" class="d-flex flex-wrap flex-column text-center justify-content-center text-black text-decoration-none mb-2">
+                                        <div class="category-circle">
+                                            <img src="images/categories/image 33.png" class="img-fluid" alt="">
+                                        </div>
+                                        <span class="d-block">משחזות</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="row">
+                                <div class="col-12 category-item">
+                                    <a href="#" class="d-flex flex-wrap flex-column text-center justify-content-center text-black text-decoration-none mb-2">
+                                        <div class="category-circle">
+                                            <img src="images/categories/image 33.png" class="img-fluid" alt="">
+                                        </div>
+                                        <span class="d-block">משחזות</span>
+                                    </a>
+                                </div>
+                                <div class="col-12 category-item">
+                                    <a href="#" class="d-flex flex-wrap flex-column text-center justify-content-center text-black text-decoration-none mb-2">
+                                        <div class="category-circle">
+                                            <img src="images/categories/image 33.png" class="img-fluid" alt="">
+                                        </div>
+                                        <span class="d-block">משחזות</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- שורה 3 -->
+                        <div class="swiper-slide">
+                            <div class="row">
+                                <div class="col-12 category-item">
+                                    <a href="#" class="d-flex flex-wrap flex-column text-center justify-content-center text-black text-decoration-none mb-2">
+                                        <div class="category-circle">
+                                            <img src="images/categories/image 33.png" class="img-fluid" alt="">
+                                        </div>
+                                        <span class="d-block">משחזות</span>
+                                    </a>
+                                </div>
+                                <div class="col-12 category-item">
+                                    <a href="#" class="d-flex flex-wrap flex-column text-center justify-content-center text-black text-decoration-none mb-2">
+                                        <div class="category-circle">
+                                            <img src="images/categories/image 33.png" class="img-fluid" alt="">
+                                        </div>
+                                        <span class="d-block">משחזות</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- המשך שורות עד 20 פריטים -->
+                        <!-- שורה 4 -->
+                        <div class="swiper-slide">
+                            <div class="row">
+                                <div class="col-12 category-item">
+                                    <a href="#" class="d-flex flex-wrap flex-column text-center justify-content-center text-black text-decoration-none mb-2">
+                                        <div class="category-circle">
+                                            <img src="images/categories/image 33.png" class="img-fluid" alt="">
+                                        </div>
+                                        <span class="d-block">משחזות</span>
+                                    </a>
+                                </div>
+                                <div class="col-12 category-item">
+                                    <a href="#" class="d-flex flex-wrap flex-column text-center justify-content-center text-black text-decoration-none mb-2">
+                                        <div class="category-circle">
+                                            <img src="images/categories/image 33.png" class="img-fluid" alt="">
+                                        </div>
+                                        <span class="d-block">משחזות</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- המשך לעוד שורות -->
+                        <!-- שורה 4 -->
+                        <div class="swiper-slide">
+                            <div class="row">
+                                <div class="col-12 category-item">
+                                    <a href="#" class="d-flex flex-wrap flex-column text-center justify-content-center text-black text-decoration-none mb-2">
+                                        <div class="category-circle">
+                                            <img src="images/categories/image 33.png" class="img-fluid" alt="">
+                                        </div>
+                                        <span class="d-block">משחזות</span>
+                                    </a>
+                                </div>
+                                <div class="col-12 category-item">
+                                    <a href="#" class="d-flex flex-wrap flex-column text-center justify-content-center text-black text-decoration-none mb-2">
+                                        <div class="category-circle">
+                                            <img src="images/categories/image 33.png" class="img-fluid" alt="">
+                                        </div>
+                                        <span class="d-block">משחזות</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- המשך לעוד שורות -->
+                        <!-- שורה 4 -->
+                        <div class="swiper-slide">
+                            <div class="row">
+                                <div class="col-12 category-item">
+                                    <a href="#" class="d-flex flex-wrap flex-column text-center justify-content-center text-black text-decoration-none mb-2">
+                                        <div class="category-circle">
+                                            <img src="images/categories/image 33.png" class="img-fluid" alt="">
+                                        </div>
+                                        <span class="d-block">משחזות</span>
+                                    </a>
+                                </div>
+                                <div class="col-12 category-item">
+                                    <a href="#" class="d-flex flex-wrap flex-column text-center justify-content-center text-black text-decoration-none mb-2">
+                                        <div class="category-circle">
+                                            <img src="images/categories/image 33.png" class="img-fluid" alt="">
+                                        </div>
+                                        <span class="d-block">משחזות</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- המשך לעוד שורות -->
+                        <!-- שורה 4 -->
+                        <div class="swiper-slide">
+                            <div class="row">
+                                <div class="col-12 category-item">
+                                    <a href="#" class="d-flex flex-wrap flex-column text-center justify-content-center text-black text-decoration-none mb-2">
+                                        <div class="category-circle">
+                                            <img src="images/categories/image 33.png" class="img-fluid" alt="">
+                                        </div>
+                                        <span class="d-block">משחזות</span>
+                                    </a>
+                                </div>
+                                <div class="col-12 category-item">
+                                    <a href="#" class="d-flex flex-wrap flex-column text-center justify-content-center text-black text-decoration-none mb-2">
+                                        <div class="category-circle">
+                                            <img src="images/categories/image 33.png" class="img-fluid" alt="">
+                                        </div>
+                                        <span class="d-block">משחזות</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- המשך לעוד שורות -->
+                        <!-- שורה 4 -->
+                        <div class="swiper-slide">
+                            <div class="row">
+                                <div class="col-12 category-item">
+                                    <a href="#" class="d-flex flex-wrap flex-column text-center justify-content-center text-black text-decoration-none mb-2">
+                                        <div class="category-circle">
+                                            <img src="images/categories/image 33.png" class="img-fluid" alt="">
+                                        </div>
+                                        <span class="d-block">משחזות</span>
+                                    </a>
+                                </div>
+                                <div class="col-12 category-item">
+                                    <a href="#" class="d-flex flex-wrap flex-column text-center justify-content-center text-black text-decoration-none mb-2">
+                                        <div class="category-circle">
+                                            <img src="images/categories/image 33.png" class="img-fluid" alt="">
+                                        </div>
+                                        <span class="d-block">משחזות</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- המשך לעוד שורות -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section Sales -->
+    <section data-aos="fade-up" class="py-5 section-sales">
+        <div class="container position-relative pt-2">
+            <!-- First Div: Title and Button -->
+            <div class="row mb-4">
+                <div class="col-12 col-md-6 text-end">
+                    <h3 class="h3">מבצעי Black November</h3>
+                </div>
+                <div class="col-12 col-md-6 text-start">
+                    <a href="#" class="btn btn-lg btn-dark rounded-0">לכל המבצעים</a>
+                </div>
+            </div>
+
+            <div class="position-relative">
+                <!-- Add navigation buttons -->
+                <div class="swiper-button-next">
+                    <button class="btn btn-link p-0 m-0 bg-transparent" aria-label="Next slide">
+                        <img src="images/arrow-white-start.svg" alt="Previous slide">
+                    </button>
+                </div>
+                <div class="swiper-button-prev">
+                    <button class="btn btn-link p-0 m-0 bg-transparent" aria-label="Previous slide">
+                        <img src="images/arrow-white-end.svg" alt="Next slide">
+                    </button>
+                </div>
+
+                <!-- Second Div: Swiper -->
+                <div class="swiper product-swiper mt-5">
+
+                    <!-- Navigation Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+
+                    <div class="swiper-wrapper">
+                        <!-- Swiper Item (Product Card) -->
+                        <div class="swiper-slide">
+                            <div class="card border-0 mt-1">
+                                <div class="position-absolute top-0 end-0 py-3 px-2 mx-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <span class="badge bg-primary text-dark">מבצע!</span>
+                                </div>
+                                <div class="position-absolute top-0 start-0 py-3 px-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <btn class="btn bg-transparent"> <img src="images/heart.svg"> </span>
+                                </div>
+                                <div class="card-body">
+
+                                    <!-- Product Image -->
+                                    <div class="card-img-top mt-5 mb-5">
+                                        <img src="images/products/image 34.png" class="img-fluid" alt="Product 1">
+                                    </div>
+
+                                </div>
+
+                                <div class="card-footer bg-transparent border-0 px-0 mt-3">
+                                    
+                                    <div class="row mb-3">
+
+                                        <div class="col-7">
+                                            <div class="card-title">
+                                                משחזת זווית 18V גוף בלבד "4.5 Milwaukee M18 FSAG115X fuel
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Brand Logo -->
+                                        <div class="col-5 text-start">
+                                            <img src="images/brands/image 3.png" class="card-img img-fluid mb-2" alt="Brand Logo">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row mb-4">
+
+                                        <div class="col-6">
+                                            <p class="card-text">
+                                                <span dir="ltr" class="text-black">₪ 619</span>
+                                                <span dir="ltr" class="text-decoration-line-through">₪ 749</span> 
+                                            </p>
+                                        </div>
+
+                                        <div class="col-6 align-self-end">
+                                            <p class="card-text card-sku text-start">מק”ט: 4567893</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="#" class="card-link btn btn-block rounded-0 fw-bold btn-primary w-100"> <img class="ps-2 img-fluid" src="images/cart.svg"> הוספה לעגלה</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card border-0 mt-1">
+                                <div class="position-absolute top-0 end-0 py-3 px-2 mx-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <span class="badge bg-primary text-dark">מבצע!</span>
+                                </div>
+                                <div class="position-absolute top-0 start-0 py-3 px-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <btn class="btn bg-transparent"> <img src="images/heart.svg"> </span>
+                                </div>
+                                <div class="card-body">
+
+                                    <!-- Product Image -->
+                                    <div class="card-img-top mt-5 mb-5">
+                                        <img src="images/products/image 35.png" class="img-fluid" alt="Product 1">
+                                    </div>
+
+                                </div>
+
+                                <div class="card-footer bg-transparent border-0 px-0 mt-3">
+                                    
+                                    <div class="row mb-3">
+
+                                        <div class="col-7">
+                                            <div class="card-title">
+                                                משחזת זווית 18V גוף בלבד "4.5 Milwaukee M18 FSAG115X fuel
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Brand Logo -->
+                                        <div class="col-5 text-start">
+                                            <img src="images/brands/image 3.png" class="card-img img-fluid mb-2" alt="Brand Logo">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row mb-4">
+
+                                        <div class="col-6">
+                                            <p class="card-text">
+                                                <span dir="ltr" class="text-black">₪ 619</span>
+                                                <span dir="ltr" class="text-decoration-line-through">₪ 749</span> 
+                                            </p>
+                                        </div>
+
+                                        <div class="col-6 align-self-end">
+                                            <p class="card-text card-sku text-start">מק”ט: 4567893</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="#" class="card-link btn btn-block rounded-0 fw-bold btn-primary w-100"> <img class="ps-2 img-fluid" src="images/cart.svg"> הוספה לעגלה</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card border-0 mt-1">
+                                <div class="position-absolute top-0 end-0 py-3 px-2 mx-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <span class="badge bg-primary text-dark">מבצע!</span>
+                                </div>
+                                <div class="position-absolute top-0 start-0 py-3 px-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <btn class="btn bg-transparent"> <img src="images/heart.svg"> </span>
+                                </div>
+                                <div class="card-body">
+
+                                    <!-- Product Image -->
+                                    <div class="card-img-top mt-5 mb-5">
+                                        <img src="images/products/image 36.png" class="img-fluid" alt="Product 1">
+                                    </div>
+
+                                </div>
+
+                                <div class="card-footer bg-transparent border-0 px-0 mt-3">
+                                    
+                                    <div class="row mb-3">
+
+                                        <div class="col-7">
+                                            <div class="card-title">
+                                                משחזת זווית 18V גוף בלבד "4.5 Milwaukee M18 FSAG115X fuel
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Brand Logo -->
+                                        <div class="col-5 text-start">
+                                            <img src="images/brands/image 3.png" class="card-img img-fluid mb-2" alt="Brand Logo">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row mb-4">
+
+                                        <div class="col-6">
+                                            <p class="card-text">
+                                                <span dir="ltr" class="text-black">₪ 619</span>
+                                                <span dir="ltr" class="text-decoration-line-through">₪ 749</span> 
+                                            </p>
+                                        </div>
+
+                                        <div class="col-6 align-self-end">
+                                            <p class="card-text card-sku text-start">מק”ט: 4567893</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="#" class="card-link btn btn-block rounded-0 fw-bold btn-primary w-100"> <img class="ps-2 img-fluid" src="images/cart.svg"> הוספה לעגלה</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card border-0 mt-1">
+                                <div class="position-absolute top-0 end-0 py-3 px-2 mx-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <span class="badge bg-primary text-dark">מבצע!</span>
+                                </div>
+                                <div class="position-absolute top-0 start-0 py-3 px-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <btn class="btn bg-transparent"> <img src="images/heart.svg"> </span>
+                                </div>
+                                <div class="card-body">
+
+                                    <!-- Product Image -->
+                                    <div class="card-img-top mt-5 mb-5">
+                                        <img src="images/products/image 37.png" class="img-fluid" alt="Product 1">
+                                    </div>
+
+                                </div>
+
+                                <div class="card-footer bg-transparent border-0 px-0 mt-3">
+                                    
+                                    <div class="row mb-3">
+
+                                        <div class="col-7">
+                                            <div class="card-title">
+                                                משחזת זווית 18V גוף בלבד "4.5 Milwaukee M18 FSAG115X fuel
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Brand Logo -->
+                                        <div class="col-5 text-start">
+                                            <img src="images/brands/image 3.png" class="card-img img-fluid mb-2" alt="Brand Logo">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row mb-4">
+
+                                        <div class="col-6">
+                                            <p class="card-text">
+                                                <span dir="ltr" class="text-black">₪ 619</span>
+                                                <span dir="ltr" class="text-decoration-line-through">₪ 749</span> 
+                                            </p>
+                                        </div>
+
+                                        <div class="col-6 align-self-end">
+                                            <p class="card-text card-sku text-start">מק”ט: 4567893</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="#" class="card-link btn btn-block rounded-0 fw-bold btn-primary w-100"> <img class="ps-2 img-fluid" src="images/cart.svg"> הוספה לעגלה</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card border-0 mt-1">
+                                <div class="position-absolute top-0 end-0 py-3 px-2 mx-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <span class="badge bg-primary text-dark">מבצע!</span>
+                                </div>
+                                <div class="position-absolute top-0 start-0 py-3 px-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <btn class="btn bg-transparent"> <img src="images/heart.svg"> </span>
+                                </div>
+                                <div class="card-body">
+
+                                    <!-- Product Image -->
+                                    <div class="card-img-top mt-5 mb-5">
+                                        <img src="images/products/image 38.png" class="img-fluid" alt="Product 1">
+                                    </div>
+
+                                </div>
+
+                                <div class="card-footer bg-transparent border-0 px-0 mt-3">
+                                    
+                                    <div class="row mb-3">
+
+                                        <div class="col-7">
+                                            <div class="card-title">
+                                                משחזת זווית 18V גוף בלבד "4.5 Milwaukee M18 FSAG115X fuel
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Brand Logo -->
+                                        <div class="col-5 text-start">
+                                            <img src="images/brands/image 3.png" class="card-img img-fluid mb-2" alt="Brand Logo">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row mb-4">
+
+                                        <div class="col-6">
+                                            <p class="card-text">
+                                                <span dir="ltr" class="text-black">₪ 619</span>
+                                                <span dir="ltr" class="text-decoration-line-through">₪ 749</span> 
+                                            </p>
+                                        </div>
+
+                                        <div class="col-6 align-self-end">
+                                            <p class="card-text card-sku text-start">מק”ט: 4567893</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="#" class="card-link btn btn-block rounded-0 fw-bold btn-primary w-100"> <img class="ps-2 img-fluid" src="images/cart.svg"> הוספה לעגלה</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card border-0 mt-1">
+                                <div class="position-absolute top-0 end-0 py-3 px-2 mx-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <span class="badge bg-primary text-dark">מבצע!</span>
+                                </div>
+                                <div class="position-absolute top-0 start-0 py-3 px-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <btn class="btn bg-transparent"> <img src="images/heart.svg"> </span>
+                                </div>
+                                <div class="card-body">
+
+                                    <!-- Product Image -->
+                                    <div class="card-img-top mt-5 mb-5">
+                                        <img src="images/products/image 34.png" class="img-fluid" alt="Product 1">
+                                    </div>
+
+                                </div>
+
+                                <div class="card-footer bg-transparent border-0 px-0 mt-3">
+                                    
+                                    <div class="row mb-3">
+
+                                        <div class="col-7">
+                                            <div class="card-title">
+                                                משחזת זווית 18V גוף בלבד "4.5 Milwaukee M18 FSAG115X fuel
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Brand Logo -->
+                                        <div class="col-5 text-start">
+                                            <img src="images/brands/image 3.png" class="card-img img-fluid mb-2" alt="Brand Logo">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row mb-4">
+
+                                        <div class="col-6">
+                                            <p class="card-text">
+                                                <span dir="ltr" class="text-black">₪ 619</span>
+                                                <span dir="ltr" class="text-decoration-line-through">₪ 749</span> 
+                                            </p>
+                                        </div>
+
+                                        <div class="col-6 align-self-end">
+                                            <p class="card-text card-sku text-start">מק”ט: 4567893</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="#" class="card-link btn btn-block rounded-0 fw-bold btn-primary w-100"> <img class="ps-2 img-fluid" src="images/cart.svg"> הוספה לעגלה</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Section Sales -->
+    <section data-aos="fade-up" class="py-5 section-sales">
+        <div class="container position-relative">
+            <!-- First Div: Title and Button -->
+            <div class="row mb-4">
+                <div class="col-12 col-md-6 text-end">
+                    <h3 class="h3">חדש על המדף</h3>
+                </div>
+                <div class="col-12 col-md-6 text-start">
+                    <a href="#" class="btn btn-lg btn-dark rounded-0">לכל המבצעים</a>
+                </div>
+            </div>
+
+            <div class="position-relative">
+                <!-- Add navigation buttons -->
+                <div class="swiper-button-next">
+                    <button class="btn btn-link p-0 m-0 bg-transparent" aria-label="Next slide">
+                        <img src="images/arrow-white-start.svg" alt="Previous slide">
+                    </button>
+                </div>
+                <div class="swiper-button-prev">
+                    <button class="btn btn-link p-0 m-0 bg-transparent" aria-label="Previous slide">
+                        <img src="images/arrow-white-end.svg" alt="Next slide">
+                    </button>
+                </div>
+
+                <!-- Second Div: Swiper -->
+                <div class="swiper product-swiper mt-5">
+
+                    <!-- Navigation Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+
+                    <div class="swiper-wrapper">
+                        <!-- Swiper Item (Product Card) -->
+                        <div class="swiper-slide">
+                            <div class="card border-0 mt-1">
+                                <div class="position-absolute top-0 end-0 py-3 px-2 mx-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <span class="badge bg-primary text-dark">מבצע!</span>
+                                </div>
+                                <div class="position-absolute top-0 start-0 py-3 px-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <btn class="btn bg-transparent"> <img src="images/heart.svg"> </span>
+                                </div>
+                                <div class="card-body">
+
+                                    <!-- Product Image -->
+                                    <div class="card-img-top mt-5 mb-5">
+                                        <img src="images/products/image 34.png" class="img-fluid" alt="Product 1">
+                                    </div>
+
+                                </div>
+
+                                <div class="card-footer bg-transparent border-0 px-0 mt-3">
+                                    
+                                    <div class="row mb-3">
+
+                                        <div class="col-7">
+                                            <div class="card-title">
+                                                משחזת זווית 18V גוף בלבד "4.5 Milwaukee M18 FSAG115X fuel
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Brand Logo -->
+                                        <div class="col-5 text-start">
+                                            <img src="images/brands/image 3.png" class="card-img img-fluid mb-2" alt="Brand Logo">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row mb-4">
+
+                                        <div class="col-6">
+                                            <p class="card-text">
+                                                <span dir="ltr" class="text-black">₪ 619</span>
+                                                <span dir="ltr" class="text-decoration-line-through">₪ 749</span> 
+                                            </p>
+                                        </div>
+
+                                        <div class="col-6 align-self-end">
+                                            <p class="card-text card-sku text-start">מק”ט: 4567893</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="#" class="card-link btn btn-block rounded-0 fw-bold btn-primary w-100"> <img class="ps-2 img-fluid" src="images/cart.svg"> הוספה לעגלה</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card border-0 mt-1">
+                                <div class="position-absolute top-0 end-0 py-3 px-2 mx-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <span class="badge bg-primary text-dark">מבצע!</span>
+                                </div>
+                                <div class="position-absolute top-0 start-0 py-3 px-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <btn class="btn bg-transparent"> <img src="images/heart.svg"> </span>
+                                </div>
+                                <div class="card-body">
+
+                                    <!-- Product Image -->
+                                    <div class="card-img-top mt-5 mb-5">
+                                        <img src="images/products/image 35.png" class="img-fluid" alt="Product 1">
+                                    </div>
+
+                                </div>
+
+                                <div class="card-footer bg-transparent border-0 px-0 mt-3">
+                                    
+                                    <div class="row mb-3">
+
+                                        <div class="col-7">
+                                            <div class="card-title">
+                                                משחזת זווית 18V גוף בלבד "4.5 Milwaukee M18 FSAG115X fuel
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Brand Logo -->
+                                        <div class="col-5 text-start">
+                                            <img src="images/brands/image 3.png" class="card-img img-fluid mb-2" alt="Brand Logo">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row mb-4">
+
+                                        <div class="col-6">
+                                            <p class="card-text">
+                                                <span dir="ltr" class="text-black">₪ 619</span>
+                                                <span dir="ltr" class="text-decoration-line-through">₪ 749</span> 
+                                            </p>
+                                        </div>
+
+                                        <div class="col-6 align-self-end">
+                                            <p class="card-text card-sku text-start">מק”ט: 4567893</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="#" class="card-link btn btn-block rounded-0 fw-bold btn-primary w-100"> <img class="ps-2 img-fluid" src="images/cart.svg"> הוספה לעגלה</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card border-0 mt-1">
+                                <div class="position-absolute top-0 end-0 py-3 px-2 mx-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <span class="badge bg-primary text-dark">מבצע!</span>
+                                </div>
+                                <div class="position-absolute top-0 start-0 py-3 px-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <btn class="btn bg-transparent"> <img src="images/heart.svg"> </span>
+                                </div>
+                                <div class="card-body">
+
+                                    <!-- Product Image -->
+                                    <div class="card-img-top mt-5 mb-5">
+                                        <img src="images/products/image 36.png" class="img-fluid" alt="Product 1">
+                                    </div>
+
+                                </div>
+
+                                <div class="card-footer bg-transparent border-0 px-0 mt-3">
+                                    
+                                    <div class="row mb-3">
+
+                                        <div class="col-7">
+                                            <div class="card-title">
+                                                משחזת זווית 18V גוף בלבד "4.5 Milwaukee M18 FSAG115X fuel
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Brand Logo -->
+                                        <div class="col-5 text-start">
+                                            <img src="images/brands/image 3.png" class="card-img img-fluid mb-2" alt="Brand Logo">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row mb-4">
+
+                                        <div class="col-6">
+                                            <p class="card-text">
+                                                <span dir="ltr" class="text-black">₪ 619</span>
+                                                <span dir="ltr" class="text-decoration-line-through">₪ 749</span> 
+                                            </p>
+                                        </div>
+
+                                        <div class="col-6 align-self-end">
+                                            <p class="card-text card-sku text-start">מק”ט: 4567893</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="#" class="card-link btn btn-block rounded-0 fw-bold btn-primary w-100"> <img class="ps-2 img-fluid" src="images/cart.svg"> הוספה לעגלה</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card border-0 mt-1">
+                                <div class="position-absolute top-0 end-0 py-3 px-2 mx-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <span class="badge bg-primary text-dark">מבצע!</span>
+                                </div>
+                                <div class="position-absolute top-0 start-0 py-3 px-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <btn class="btn bg-transparent"> <img src="images/heart.svg"> </span>
+                                </div>
+                                <div class="card-body">
+
+                                    <!-- Product Image -->
+                                    <div class="card-img-top mt-5 mb-5">
+                                        <img src="images/products/image 37.png" class="img-fluid" alt="Product 1">
+                                    </div>
+
+                                </div>
+
+                                <div class="card-footer bg-transparent border-0 px-0 mt-3">
+                                    
+                                    <div class="row mb-3">
+
+                                        <div class="col-7">
+                                            <div class="card-title">
+                                                משחזת זווית 18V גוף בלבד "4.5 Milwaukee M18 FSAG115X fuel
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Brand Logo -->
+                                        <div class="col-5 text-start">
+                                            <img src="images/brands/image 3.png" class="card-img img-fluid mb-2" alt="Brand Logo">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row mb-4">
+
+                                        <div class="col-6">
+                                            <p class="card-text">
+                                                <span dir="ltr" class="text-black">₪ 619</span>
+                                                <span dir="ltr" class="text-decoration-line-through">₪ 749</span> 
+                                            </p>
+                                        </div>
+
+                                        <div class="col-6 align-self-end">
+                                            <p class="card-text card-sku text-start">מק”ט: 4567893</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="#" class="card-link btn btn-block rounded-0 fw-bold btn-primary w-100"> <img class="ps-2 img-fluid" src="images/cart.svg"> הוספה לעגלה</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card border-0 mt-1">
+                                <div class="position-absolute top-0 end-0 py-3 px-2 mx-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <span class="badge bg-primary text-dark">מבצע!</span>
+                                </div>
+                                <div class="position-absolute top-0 start-0 py-3 px-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <btn class="btn bg-transparent"> <img src="images/heart.svg"> </span>
+                                </div>
+                                <div class="card-body">
+
+                                    <!-- Product Image -->
+                                    <div class="card-img-top mt-5 mb-5">
+                                        <img src="images/products/image 38.png" class="img-fluid" alt="Product 1">
+                                    </div>
+
+                                </div>
+
+                                <div class="card-footer bg-transparent border-0 px-0 mt-3">
+                                    
+                                    <div class="row mb-3">
+
+                                        <div class="col-7">
+                                            <div class="card-title">
+                                                משחזת זווית 18V גוף בלבד "4.5 Milwaukee M18 FSAG115X fuel
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Brand Logo -->
+                                        <div class="col-5 text-start">
+                                            <img src="images/brands/image 3.png" class="card-img img-fluid mb-2" alt="Brand Logo">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row mb-4">
+
+                                        <div class="col-6">
+                                            <p class="card-text">
+                                                <span dir="ltr" class="text-black">₪ 619</span>
+                                                <span dir="ltr" class="text-decoration-line-through">₪ 749</span> 
+                                            </p>
+                                        </div>
+
+                                        <div class="col-6 align-self-end">
+                                            <p class="card-text card-sku text-start">מק”ט: 4567893</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="#" class="card-link btn btn-block rounded-0 fw-bold btn-primary w-100"> <img class="ps-2 img-fluid" src="images/cart.svg"> הוספה לעגלה</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card border-0 mt-1">
+                                <div class="position-absolute top-0 end-0 py-3 px-2 mx-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <span class="badge bg-primary text-dark">מבצע!</span>
+                                </div>
+                                <div class="position-absolute top-0 start-0 py-3 px-2 z-1">
+                                    <!-- Stamp (Sale or New) -->
+                                    <btn class="btn bg-transparent"> <img src="images/heart.svg"> </span>
+                                </div>
+                                <div class="card-body">
+
+                                    <!-- Product Image -->
+                                    <div class="card-img-top mt-5 mb-5">
+                                        <img src="images/products/image 34.png" class="img-fluid" alt="Product 1">
+                                    </div>
+
+                                </div>
+
+                                <div class="card-footer bg-transparent border-0 px-0 mt-3">
+                                    
+                                    <div class="row mb-3">
+
+                                        <div class="col-7">
+                                            <div class="card-title">
+                                                משחזת זווית 18V גוף בלבד "4.5 Milwaukee M18 FSAG115X fuel
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Brand Logo -->
+                                        <div class="col-5 text-start">
+                                            <img src="images/brands/image 3.png" class="card-img img-fluid mb-2" alt="Brand Logo">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row mb-4">
+
+                                        <div class="col-6">
+                                            <p class="card-text">
+                                                <span dir="ltr" class="text-black">₪ 619</span>
+                                                <span dir="ltr" class="text-decoration-line-through">₪ 749</span> 
+                                            </p>
+                                        </div>
+
+                                        <div class="col-6 align-self-end">
+                                            <p class="card-text card-sku text-start">מק”ט: 4567893</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="#" class="card-link btn btn-block rounded-0 fw-bold btn-primary w-100"> <img class="ps-2 img-fluid" src="images/cart.svg"> הוספה לעגלה</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Banners Section -->
+    <section data-aos="fade-up" class="py-4 section-banners">
+        <div class="container py-2 px-xl-0 position-relative">
+            <div class="row">
+
+                <!-- Second Banner -->
+                <div class="col-12 col-xl-6 mb-4">
+                    <div class="banner-card position-relative overflow-hidden">
+                        <!-- Background Image -->
+                        <img src="images/banners/banner2.jpg" class="img-fluid w-100 h-100 position-absolute top-0 start-0 object-fit-cover" alt="Banner 2">
+
+                        <!-- Overlay -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+
+                        <!-- Content -->
+                        <div class="banner-content position-relative text-center text-white p-4">
+                            <img src="images/banners/logo-banner-2.png" class="img-fluid mb-3" alt="Brand Logo 2">
+                            <div class="banner-title mb-3">כלי עבודה וציוד טכני איכותיים למוסכים, לתעשייה ולאחזקה</div>
+                            <div class="banner-text mb-4">יבוא ושיווק של ציוד מקצועי של מותגים מובילים</div>
+                            <a href="#" class="btn btn-secondary mt-2 rounded-0">קרא עוד</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- First Banner -->
+                <div class="col-12 col-xl-6 mb-4">
+                    <div class="banner-card position-relative overflow-hidden">
+                        <!-- Background Image -->
+                        <img src="images/banners/banner1.jpg" class="img-fluid w-100 h-100 position-absolute top-0 start-0 object-fit-cover" alt="Banner 1">
+
+                        <!-- Overlay -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+
+                        <!-- Content -->
+                        <div class="banner-content position-relative text-center text-white p-4">
+                            <img src="images/banners/logo-banner-1.png" class="img-fluid mb-3" alt="Brand Logo 1">
+                            <div class="banner-title mb-3">מבצע כלי העבודה של Makita ב-15% הנחה</div>
+                            <div class="banner-text mb-4">לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית גולר מונפרר סוברט לורם שבצק יהול, לכנוץ בעריר גק ליץ.</div>
+                            <a href="#" class="btn btn-secondary mt-2 rounded-0">למבצעים</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Logos Section -->
+    <section data-aos="fade-up" class="section-logos py-4 mt-2">
+        <div class="container  p-xl-0 position-relative">
+            <!-- <h3 class="text-center mb-4">לוגואים שלנו</h3> -->
+            <div class="row justify-content-center justify-content-xl-between">
+                <!-- Logo 6 -->
+                <div class="col-md-3 col-xl-auto mb-4 text-center">
+                    <img src="images/brands/image 7.png" class="img-fluid" alt="Logo 6">
+                </div>
+                <!-- Logo 5 -->
+                <div class="col-md-3 col-xl-auto mb-4 text-center">
+                    <img src="images/brands/image 6.png" class="img-fluid" alt="Logo 5">
+                </div>
+                <!-- Logo 4 -->
+                <div class="col-md-3 col-xl-auto mb-4 text-center">
+                    <img src="images/brands/image 5.png" class="img-fluid" alt="Logo 4">
+                </div>
+                <!-- Logo 3 -->
+                <div class="col-md-3 col-xl-auto mb-4 text-center">
+                    <img src="images/brands/image 4.png" class="img-fluid" alt="Logo 3">
+                </div>
+                <!-- Logo 2 -->
+                <div class="col-md-3 col-xl-auto mb-4 text-center">
+                    <img src="images/brands/image 3.png" class="img-fluid" alt="Logo 2">
+                </div>
+                <!-- Logo 1 -->
+                <div class="col-md-3 col-xl-auto mb-4 text-center">
+                    <img src="images/brands/image 2.png" class="img-fluid" alt="Logo 1">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full-Width Banner Section -->
+    <section data-aos="fade-up" class="section-banner-full py-4 mt-3 position-relative">
+        <div class="container p-xl-0 position-relative">
+            <div class="swiper swiper-banner-full h-100">
+                <div class="swiper-wrapper position-relative h-100">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide position-relative h-100">
+                        <!-- Background Image -->
+                        <img src="images/banners/banner3.jpg" class="img-fluid w-100 h-100" alt="Banner Image">
+                        
+                        <!-- Overlay -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+
+                        <!-- Content -->
+                        <div class="container position-absolute top-0 text-center text-white py-5">
+                            <div class="banner-content p-5">
+                                <div class="px-2">
+                                    <div class="mb-3 banner-title text-end">
+                                        <strong>ל.כ. כלי עבודה וציוד בע"מ</strong> <br> לעבוד עם איכות
+                                    </div>
+                                    <div class="mb-4 banner-text text-end">
+                                        <p>
+                                            <span style="font-weight: 500;">ל.כ. כלי עבודה וציוד בע"מ הינה חברה מובילה ליבוא, יצוא ושיווק של כלי עבודה וציוד טכני איכותיים ומקצועיים למוסכים, לתעשייה ולאחזקה עם וותק של 70 שנה.</span>
+                                        </p>
+                                        <p>
+                                            ל.כ. מציעה מגוון רחב של כלים וציוד הכולל: כלי עבודה ידניים וחשמליים, ציוד מוסכים, ציוד הרמה וקשירה, ציוד לשינוע, ארגזי כלים, עגלות כלים, ריהוט תעשייתי, ציוד בטיחות ומיגון, ציוד שטיפה וניקיון, ציוד הידראולי, ציוד מסגרות, כלי נגרות, כלי גינון וגיזום, כלי אויר, מדחסים, גנרטורים, פנסים, ציוד לרכבי שטח ועוד.
+                                        </p>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-primary rounded-0 fw-bold">אודותינו</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide position-relative h-100">
+                        <!-- Background Image -->
+                        <img src="images/banners/banner3.jpg" class="img-fluid w-100 h-100" alt="Banner Image">
+                        
+                        <!-- Overlay -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+
+                        <!-- Content -->
+                        <div class="container position-absolute top-0 text-center text-white py-5">
+                            <div class="banner-content p-5">
+                                <div class="px-2">
+                                    <div class="mb-3 banner-title text-end">
+                                        <strong>ל.כ. כלי עבודה וציוד בע"מ</strong> <br> לעבוד עם איכות
+                                    </div>
+                                    <div class="mb-4 banner-text text-end">
+                                        <p>
+                                            <span style="font-weight: 500;">ל.כ. כלי עבודה וציוד בע"מ הינה חברה מובילה ליבוא, יצוא ושיווק של כלי עבודה וציוד טכני איכותיים ומקצועיים למוסכים, לתעשייה ולאחזקה עם וותק של 70 שנה.</span>
+                                        </p>
+                                        <p>
+                                            ל.כ. מציעה מגוון רחב של כלים וציוד הכולל: כלי עבודה ידניים וחשמליים, ציוד מוסכים, ציוד הרמה וקשירה, ציוד לשינוע, ארגזי כלים, עגלות כלים, ריהוט תעשייתי, ציוד בטיחות ומיגון, ציוד שטיפה וניקיון, ציוד הידראולי, ציוד מסגרות, כלי נגרות, כלי גינון וגיזום, כלי אויר, מדחסים, גנרטורים, פנסים, ציוד לרכבי שטח ועוד.
+                                        </p>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-primary rounded-0 fw-bold">אודותינו</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide position-relative h-100">
+                        <!-- Background Image -->
+                        <img src="images/banners/banner3.jpg" class="img-fluid w-100 h-100" alt="Banner Image">
+                        
+                        <!-- Overlay -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+
+                        <!-- Content -->
+                        <div class="container position-absolute top-0 text-center text-white py-5">
+                            <div class="banner-content p-5">
+                                <div class="px-2">
+                                    <div class="mb-3 banner-title text-end">
+                                        <strong>ל.כ. כלי עבודה וציוד בע"מ</strong> <br> לעבוד עם איכות
+                                    </div>
+                                    <div class="mb-4 banner-text text-end">
+                                        <p>
+                                            <span style="font-weight: 500;">ל.כ. כלי עבודה וציוד בע"מ הינה חברה מובילה ליבוא, יצוא ושיווק של כלי עבודה וציוד טכני איכותיים ומקצועיים למוסכים, לתעשייה ולאחזקה עם וותק של 70 שנה.</span>
+                                        </p>
+                                        <p>
+                                            ל.כ. מציעה מגוון רחב של כלים וציוד הכולל: כלי עבודה ידניים וחשמליים, ציוד מוסכים, ציוד הרמה וקשירה, ציוד לשינוע, ארגזי כלים, עגלות כלים, ריהוט תעשייתי, ציוד בטיחות ומיגון, ציוד שטיפה וניקיון, ציוד הידראולי, ציוד מסגרות, כלי נגרות, כלי גינון וגיזום, כלי אויר, מדחסים, גנרטורים, פנסים, ציוד לרכבי שטח ועוד.
+                                        </p>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-primary rounded-0 fw-bold">אודותינו</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Swiper Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section-services -->
+    <section data-aos="fade-up" class="section-services py-3 mt-0">
+        <div class="container bg-primary">
+            <div class="row text-center w-100 justify-content-center">
+                <!-- First Item -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="card border-0 shadow-none bg-transparent">
+                        <div class="card-body d-flex justify-content-start align-items-center flex-row">
+                            <div class="icon">
+                                <img src="images/services/icon1.png" alt="Icon 1" class="img-fluid">
+                            </div>
+                            <div class="text-end">
+                                <div class="mb-2 card-title">שירות לקוחות</div>
+                                <div class="card-text">נשמח לעמוד לרשותכם לכל שאלה</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second Item -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="card border-0 shadow-none bg-transparent">
+                        <div class="card-body d-flex justify-content-start align-items-center flex-row">
+                            <div class="icon">
+                                <img src="images/services/icon2.png" alt="Icon 2" class="img-fluid">
+                            </div>
+                            <div class="text-end">
+                                <div class="mb-2 card-title">לקוחות עיסקיים</div>
+                                <div class="card-text">ניתן מענה מדוייק לעסק שלך</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Third Item -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="card border-0 shadow-none bg-transparent">
+                        <div class="card-body d-flex justify-content-start align-items-center flex-row">
+                            <div class="icon">
+                                <img src="images/services/icon3.png" alt="Icon 3" class="img-fluid">
+                            </div>
+                            <div class="text-end">
+                                <div class="mb-2 card-title">מבצעים חורף 2025</div>
+                                <div class="card-text">חורף חם עם מבצעים של 35%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Articles Section -->
+    <section data-aos="fade-up" class="section-articles py-5 mt-2">
+        <div class="container px-xl-0 py-3 position-relative">
+            <!-- Title -->
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h3 class="h3">מאמרים מקצועיים</h3>
+                </div>
+            </div>
+
+            <div class="position-relative">
+                <!-- Add navigation buttons -->
+                <div class="swiper-button-next">
+                    <button class="btn btn-link p-0 m-0 bg-transparent" aria-label="Next slide">
+                        <img src="images/arrow-white-start.svg" alt="Previous slide">
+                    </button>
+                </div>
+                <div class="swiper-button-prev">
+                    <button class="btn btn-link p-0 m-0 bg-transparent" aria-label="Previous slide">
+                        <img src="images/arrow-white-end.svg" alt="Next slide">
+                    </button>
+                </div>
+
+                <!-- Articles Swiper -->
+                <div class="swiper articles-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Article Item -->
+                        <div class="swiper-slide">
+                            <div class="card border-0 mt-1">
+                                <!-- Article Image -->
+                                <img src="images/blog/article1.jpg" class="card-img-top rounded-0" alt="Article 1">
+                                <div class="position-absolute top-0 start-0 py-3 px-2 mx-2">
+                                    <!-- Stamp (Sale or New) -->
+                                    <span class="card-badge badge text-dark">פנסים</span>
+                                </div>
+                                <!-- Article Content -->
+                                <div class="card-body px-0">
+                                    <!-- Article Date -->
+                                    <div class="card-date">26.11.24</div>
+
+                                    <!-- Article Title -->
+                                    <div class="card-title ps-5 pt-3 pb-2">המראה המוביל של צמחים עם הפנס החדש</div>
+
+                                    <!-- Article Text -->
+                                    <div class="card-text">מאמר זה עוסק בהשפעת הפנסים על עיצוב הגינות מודרניות ואיך הם יכולים לשדרג את המראה של צמחים בערב.</div>
+
+                                    <!-- Read More Link -->
+                                    <a href="#" class="card-link mt-5 d-block text-black bg-transparent text-decoration-underline">קרא עוד</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Repeat Article Item for other articles -->
+                        <div class="swiper-slide">
+                            <div class="card border-0 mt-1">
+                                <img src="images/blog/article2.jpg" class="card-img-top rounded-0" alt="Article 2">
+                                <div class="position-absolute top-0 start-0 py-3 px-2 mx-2">
+                                    <!-- Stamp (Sale or New) -->
+                                    <span class="card-badge badge text-dark">פנסים</span>
+                                </div>
+                                <div class="card-body px-0">
+                                    <div class="card-date">26.11.24</div>
+                                    <div class="card-title ps-5 pt-3 pb-2">הכנה למפגשים זוגיים עם פנסי גן איכותיים</div>
+                                    <div class="card-text">מאמר זה מתאר את החשיבות של פנסי גן במפגשים רומנטיים ואיך הם יכולים לשדרג את האווירה בחוץ.</div>
+                                    <a href="#" class="card-link mt-5 d-block text-black bg-transparent text-decoration-underline">קרא עוד</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card border-0 mt-1">
+                                <img src="images/blog/article3.jpg" class="card-img-top rounded-0" alt="Article 3">
+                                <div class="position-absolute top-0 start-0 py-3 px-2 mx-2">
+                                    <!-- Stamp (Sale or New) -->
+                                    <span class="card-badge badge text-dark">פנסים</span>
+                                </div>
+                                <div class="card-body px-0">
+                                    <div class="card-date">26.11.24</div>
+                                    <div class="card-title ps-5 pt-3 pb-2">הפנס החדש לחורף 2025 - מהדורת טכנולוגיה מתקדמת</div>
+                                    <div class="card-text">מאמר זה מציג את הפנס החדש שלנו עם טכנולוגיה מתקדמת לשימוש בחורף, כולל אפשרויות תאורה חסכוניות ועמידות בתנאי מזג האוויר הקשים.</div>
+                                    <a href="#" class="card-link mt-5 d-block text-black bg-transparent text-decoration-underline">קרא עוד</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card border-0 mt-1">
+                                <img src="images/blog/article3.jpg" class="card-img-top rounded-0" alt="Article 3">
+                                <div class="position-absolute top-0 start-0 py-3 px-2 mx-2">
+                                    <!-- Stamp (Sale or New) -->
+                                    <span class="card-badge badge text-dark">פנסים</span>
+                                </div>
+                                <div class="card-body px-0">
+                                    <div class="card-date">26.11.24</div>
+                                    <div class="card-title ps-5 pt-3 pb-2">הכנה לחורף: טיפים לשמירה על בריאות</div>
+                                    <div class="card-text">גניפידא רוטקנוק טמא רולוד םוספיא םרול לפנטצת קבולב ריטחס יצאלק םיצוחימ</div>
+                                    <a href="#" class="card-link mt-5 d-block text-black bg-transparent text-decoration-underline">קרא עוד</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card border-0 mt-1">
+                                <img src="images/blog/article3.jpg" class="card-img-top rounded-0" alt="Article 3">
+                                <div class="position-absolute top-0 start-0 py-3 px-2 mx-2">
+                                    <!-- Stamp (Sale or New) -->
+                                    <span class="card-badge badge text-dark">פנסים</span>
+                                </div>
+                                <div class="card-body px-0">
+                                    <div class="card-date">26.11.24</div>
+                                    <div class="card-title ps-5 pt-3 pb-2">הכנה לחורף: טיפים לשמירה על בריאות</div>
+                                    <div class="card-text">גניפידא רוטקנוק טמא רולוד םוספיא םרול לפנטצת קבולב ריטחס יצאלק םיצוחימ</div>
+                                    <a href="#" class="card-link mt-5 d-block text-black bg-transparent text-decoration-underline">קרא עוד</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- More articles can be added in the same format -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Button to Show All Articles -->
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-primary rounded-0 fw-medium min-200">לכל המאמרים</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer Section -->
+    <footer id="footer-site" class="pt-5 bg-dark text-white">
+        <div class="container pt-4 position-relative">
+            <div class="row m-0">
+
+                <!-- Right Side: Logo and Social Media Icons -->
+                <div class="col-12 col-md-2 col-xl-2 text-center text-lg-start mb-4 mb-lg-0">
+                    <!-- Logo -->
+                    <div class="footer-logo mb-3 text-end">
+                        <img src="images/logo-footer.png" alt="Logo" class="img-fluid">
+                    </div>
+                    
+                    <!-- Social Media Icons -->
+                    <div class="footer-social-icons">
+                        <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Left Side: Footer Menus -->
+                <div class="col-12 col-md-10 col-xl-10">
+                    <div class="row">
+                        <!-- Footer Menu 1 -->
+                        <div class="col-12 col-md-4 col-xl-2 mb-4 mb-md-0">
+                            <div class="row">
+                                <div class="footer-title px-0">ל.כי</div>
+                            </div>
+                            <div class="row d-flex">
+                                <ul class="col-auto list-unstyled footer-list p-0">
+                                    <li><a href="#">אודות</a></li>
+                                    <li><a href="#">סניפים</a></li>
+                                    <li><a href="#">דרושים</a></li>
+                                    <li><a href="#">תקנון אתר</a></li>
+                                    <li><a href="#">הצהרת נגישות</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <!-- Footer Menu 3 (Categories) -->
+                        <div class="col-12 col-md-6 mb-4 mb-md-0">
+                            <div class="row">
+                                <div class="footer-title px-0">קטגוריות מוצרים</div>
+                            </div>
+                            <div class="row d-flex">
+                                <ul class="col-12 col-md-4 col-xl-4 list-unstyled footer-list p-0">
+                                    <li><a href="#">כלי עבודה </a></li>
+                                    <li><a href="#">ציוד טכני</a></li>
+                                    <li><a href="#">כלי גינון</a></li>
+                                    <li><a href="#">רכב ומוסכים</a></li>
+                                    <li><a href="#">עולם הריתוך</a></li>
+                                    <li><a href="#">הרמה קשירה וגרירה</a></li>
+                                </ul>
+                                <ul class="col-12 col-md-4 col-xl-4 list-unstyled footer-list p-0">
+                                    <li><a href="#">שינוע לציוד כבד</a></li>
+                                    <li><a href="#">אחסון ושינוע כלים</a></li>
+                                    <li><a href="#">ריהוט תעשייתי</a></li>
+                                    <li><a href="#">ציוד בטיחות ומיגון</a></li>
+                                    <li><a href="#">ציוד הידראולי</a></li>
+                                    <li><a href="#">מסורים וכלי נגרות</a></li>
+                                </ul>
+                                <ul class="col-12 col-md-4 col-xl-4 list-unstyled footer-list p-0">
+                                    <li><a href="#">כלי אוויר וציוד פנאומטי</a></li>
+                                    <li><a href="#">פנסים מקצועיים</a></li>
+                                    <li><a href="#">קטגוריה</a></li>
+                                    <li><a href="#">ציוד לרכבי שטח</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <!-- Footer Menu 2 -->
+                        <div class="col-12 col-md-4 col-xl-2 mb-4 mb-md-0">
+                            <div class="row">
+                                <div class="footer-title px-0">צריכים עזרה</div>
+                            </div>
+                            <div class="row d-flex">
+                                <ul class="col-auto  list-unstyled footer-list p-0">
+                                    <li><a href="#">צור קשר</a></li>
+                                    <li><a href="#">החזרות</a></li>
+                                    <li><a href="#">ביטול עסקה</a></li>
+                                    <li><a href="#">משלוחים</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Footer Menu 4 (Opening Hours) -->
+                        <div class="col-12 col-md-4 col-xl-2">
+                            <div class="footer-title px-0">שעות פעילות הסניפים</div>
+
+                            <ul class="list-unstyled footer-list p-0">
+                                <li>
+                                    <div>
+                                        <p><strong>סניף ראשי-רמלה</strong></p>
+                                        <p>ימים א'-ה' 7:30-17:30</p>
+                                        <p>יום ו' 7:30-13:00</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <p><strong>סניף צפון-קדמת גליל</strong></p>
+                                        <p>ימים א'-ה' 7:30-16:30</p>
+                                        <p>ום ו' 8:00-13:00</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <p><strong>סניף מרכז הריתוך</strong></p>
+                                        <p>ימים א'-ה' 8:00-17:00</p>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom Footer Section -->
+    <footer class="py-3 bg-dark text-white">
+        <div class="container position-relative">
+
+        	<!-- Horizontal Line for Separation -->
+        	<hr class="my-4 border-light">
+
+            <div class="row">
+
+                <!-- Right Side: Terms Menu -->
+                <div class="col-12 col-md-6 text-center text-md-start">
+                    <ul class="d-flex justify-content-center justify-content-md-start list-unstyled mb-0 p-0">
+                        <li><a href="#" class="text-white text-decoration-none">תקנון ותנאי שימוש</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">מדיניות פרטיות</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">מפת אתר</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">הצהרת נגישות</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Left Side: Credit -->
+                <div class="col-12 col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p>Created by Dooble</p>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script src="build/js/master.js"></script>
+
+
+  </body>
+</html>
