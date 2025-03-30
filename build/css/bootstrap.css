@@ -285,9 +285,12 @@ address {
   line-height: inherit;
 }
 
-ol,
+ol{
+  padding-inline-start:1rem;
+}
+
 ul {
-  padding-left: 2rem;
+  padding-inline-start:1.5rem;
 }
 
 ol,
@@ -317,10 +320,15 @@ blockquote {
   margin: 0 0 1rem;
 }
 
-b,
+
 strong {
   font-weight: bolder;
 }
+
+b {
+  font-weight: 600;
+}
+
 
 small, .small {
   font-size: 0.875em;
@@ -773,6 +781,11 @@ progress {
 @media (min-width: 1400px) {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1320px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-xxl{
+    max-width: 1440px;
   }
 }
 :root {
